@@ -3,15 +3,19 @@
   font-family:Helvetica, Arial;
 }
 
+#buttons {
+  position:fixed;
+  top:15%;
+}
+
 h1 {
   border: 2px solid black;
   width: 10em;
-  height: 1.5em;
-  position:fixed;
+  height: 2em;
+  position:relative;
   text-align: center;
   padding-top:.5em;
   left:50%;
-
 }
 
 .face {
@@ -24,15 +28,15 @@ h1 {
 }
 
 #about {
-  top:15%;
+  top:0;
 }
 
 #blogs {
-  top:35%;
+  top:4em;
 }
 
 #projects {
-  top:45%;
+  top:10em;
 }
 
 #footer {
