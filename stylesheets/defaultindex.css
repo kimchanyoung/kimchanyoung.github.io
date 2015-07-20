@@ -14,8 +14,8 @@ h1 {
 }
 
 .face {
-  height: 10em;
-  width: 10em;
+  height: 12em;
+  width: 12em;
   left:30%;
   display:inline-block;
   position:absolute;
@@ -23,15 +23,15 @@ h1 {
 }
 
 #about {
-  margin-top:17%;
+  margin-top:16%;
 }
 
 #blogs {
-  margin-top:22%;
+  margin-top:21%;
 }
 
 #projects {
-margin-top:27%;
+margin-top:26%;
 }
 
 #footer {
