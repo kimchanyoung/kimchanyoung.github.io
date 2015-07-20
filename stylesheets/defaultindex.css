@@ -3,19 +3,11 @@
   font-family:Helvetica, Arial;
 }
 
-#stuff {
-  position:relative;
-  top:40%;
-  height:50%;
-  width: 50%;
-  left:25%;
-}
-
 h1 {
   border: 2px solid black;
   width: 10em;
   height: 1.5em;
-  position:absolute;
+  position:fixed;
   text-align: center;
   padding-top:.5em;
   left:50%;
@@ -27,7 +19,7 @@ h1 {
   width: 12em;
   left:0;
   display:inline-block;
-  position:absolute;
+  position:fixed;
   top:0;
 }
 
