@@ -4,9 +4,10 @@
 }
 
 h1 {
-  border: .5em solid black;
-  width: 15em;
+  border: 2px solid black;
+  width: 10em;
   height: 1.5em;
+  margin-left: 50%
 }
 
 .face {
@@ -15,20 +16,19 @@ h1 {
   left:30%;
   display:inline-block;
   position:absolute;
-  top:auto;
-  bottom:auto;
+  margin-top:50%;
 }
 
 #about {
-
+  margin-top:40%;
 }
 
 #blogs {
-
+  margin-top:50%;
 }
 
 #projects {
-
+margin-top:60%;
 }
 
 #footer {
@@ -38,5 +38,6 @@ h1 {
   width:100%;
   background-color:white;
   left:0;
+  bottom:0;
 }
 
