@@ -25,7 +25,7 @@ h1 {
   left:35%;
   display:inline-block;
   position:fixed;
-  top:15%;
+  top:10em;
 }
 
 #about {
@@ -33,11 +33,11 @@ h1 {
 }
 
 #blogs {
-  top:14em;
+  top:13em;
 }
 
 #projects {
-  top:18em;
+  top:16em;
 }
 
 #footer {
