@@ -3,10 +3,12 @@
   font-family:Helvetica, Arial;
 }
 
-#buttons {
-  position:fixed;
+/*#buttons {
+  position:relative;
   top:15%;
-}
+  height:12em;
+  left:50%;
+}*/
 
 h1 {
   border: 2px solid black;
@@ -14,29 +16,28 @@ h1 {
   height: 2em;
   position:relative;
   text-align: center;
-  padding-top:.5em;
-  left:50%;
+  margin:0;
 }
 
 .face {
   height: 12em;
   width: 12em;
-  left:30%;
+  left:35%;
   display:inline-block;
   position:fixed;
   top:15%;
 }
 
 #about {
-  top:0;
+  top:10em;
 }
 
 #blogs {
-  top:4em;
+  top:14em;
 }
 
 #projects {
-  top:10em;
+  top:18em;
 }
 
 #footer {
