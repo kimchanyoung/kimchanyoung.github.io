@@ -73,7 +73,6 @@ h1 {
 
 .title {
   border: 1px solid black;
-
 }
 
 #footer {
@@ -90,10 +89,10 @@ h1 {
 }
 
 #blogtitle {
+  display:inline-block;
   border: 2px solid black;
   position: absolute;
   text-align: center;
-  width: 5em;
   font-size:1.5em;
   top: -1.5em;
   z-index: 0;
