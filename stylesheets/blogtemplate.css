@@ -45,32 +45,28 @@ h1 {
 
 #content {
   border: 2px solid black;
-  width: 98%;
-  height: 25em;
+  width: 70%;
+  height: 35em;
   top:12em;
   display: inline-block;
   position:absolute;
 }
 
-/*
 #sidebar {
-  display:none;
   border: 2px solid black;
   position: absolute;
   width: 24%;
   height:35em;
   top:12em;
-  /*display: inline-block;
+  display: inline-block;
   right:.5%;
   margin:0;
-}*/
+}
 
 #items {
-  top:13em;
-  display:inline-block;
   position: absolute;
-  width: 10em;
-  height: 10em;
+  width: 96%;
+  height: 2em;
   left: 2%;
   text-align: center;
 }
