@@ -5,14 +5,18 @@
 
 h1 {
   border: .5em solid black;
+  width: 15em;
+  height: 1.5em;
 }
 
 .face {
-  height: 5em;
-  width: 5em;
+  height: 10em;
+  width: 10em;
   left:30%;
   display:inline-block;
   position:absolute;
+  top:auto;
+  bottom:auto;
 }
 
 #about {
@@ -26,3 +30,13 @@ h1 {
 #projects {
 
 }
+
+#footer {
+  position:absolute;
+  height:2em;
+  text-align:center;
+  width:100%;
+  background-color:white;
+  left:0;
+}
+
