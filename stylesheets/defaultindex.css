@@ -1,17 +1,16 @@
 * {
-  font-size: 2em;
+  font-size: .2em;
   font-family:Helvetica, Arial;
 }
 
 h1 {
-  border: .5em solid black;
+  border: .2em solid black;
 }
 
 .face {
-  height: 5em;
-  width: 5em;
+  height: 1em;
+  width: 1em;
   left:30%;
-  right:70%;
   display:inline-block;
   position:absolute;
 }
