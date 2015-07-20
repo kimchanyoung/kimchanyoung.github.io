@@ -5,7 +5,10 @@
 
 #stuff {
   position:relative;
-
+  top:40%;
+  height:50%;
+  width: 50%;
+  left:25%;
 }
 
 h1 {
