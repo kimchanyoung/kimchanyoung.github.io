@@ -8,6 +8,8 @@ h1 {
   width: 10em;
   height: 1.5em;
   margin-left: 50%
+  position:absolute;
+  text-align: center;
 }
 
 .face {
@@ -16,28 +18,29 @@ h1 {
   left:30%;
   display:inline-block;
   position:absolute;
-  margin-top:50%;
+  margin-top:15%;
 }
 
 #about {
-  margin-top:40%;
+  margin-top:150%;
 }
 
 #blogs {
-  margin-top:50%;
+  margin-top:20%;
 }
 
 #projects {
-margin-top:60%;
+margin-top:25%;
 }
 
 #footer {
   position:absolute;
-  height:2em;
+  height:1em;
   text-align:center;
   width:100%;
   background-color:white;
   left:0;
   bottom:0;
+  font-size:.5em;
 }
 
