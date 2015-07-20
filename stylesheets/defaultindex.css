@@ -51,6 +51,16 @@ h1 {
   font-size:.5em;
 }
 
+a:link {
+  color:black;
+  text-decoration: none;
+}
+
 a:visited {
+  color:black;
+  text-decoration: none;
+}
+
+a:hover {
   color:navy;
 }
