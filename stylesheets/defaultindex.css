@@ -5,6 +5,7 @@
 
 #stuff {
   position:relative;
+
 }
 
 h1 {
@@ -15,27 +16,28 @@ h1 {
   text-align: center;
   padding-top:.5em;
   left:50%;
+
 }
 
 .face {
   height: 12em;
   width: 12em;
-  left:30%;
+  left:0;
   display:inline-block;
   position:absolute;
-  margin-top:15%;
+  top:0;
 }
 
 #about {
-  margin-top:16%;
+  top:0;
 }
 
 #blogs {
-  margin-top:22%;
+  bottom:50%;
 }
 
 #projects {
-margin-top:28%;
+  bottom:0;
 }
 
 #footer {
