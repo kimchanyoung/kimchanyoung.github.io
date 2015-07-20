@@ -15,7 +15,8 @@ h1 {
   width: 10em;
   position:relative;
   text-align: center;
-  margin:.5em, 0, .5em, 0;
+  margin:.5em 0em .5em 0em;
+  left: 50%;
 }
 
 .face {
