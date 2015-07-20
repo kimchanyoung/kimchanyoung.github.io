@@ -51,3 +51,6 @@ h1 {
   font-size:.5em;
 }
 
+a:visited {
+  color:navy;
+}
