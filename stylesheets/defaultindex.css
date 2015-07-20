@@ -16,13 +16,13 @@ h1 {
   position:relative;
   text-align: center;
   margin:.5em 0em .5em 0em;
-  left: 50%;
+  left: 55%;
 }
 
 .face {
   height: 12em;
   width: 12em;
-  left:35%;
+  left:30%;
   display:inline-block;
   position:fixed;
   top:10em;
