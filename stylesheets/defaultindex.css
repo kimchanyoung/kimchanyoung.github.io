@@ -17,22 +17,22 @@ h1 {
 .face {
   height: 12em;
   width: 12em;
-  left:0;
+  left:30%;
   display:inline-block;
   position:fixed;
-  top:0;
+  top:15%;
 }
 
 #about {
-  top:0;
+  top:16%;
 }
 
 #blogs {
-  bottom:50%;
+  bottom:23%%;
 }
 
 #projects {
-  bottom:0;
+  bottom:30%;
 }
 
 #footer {
