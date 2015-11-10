@@ -21,13 +21,25 @@
   font-size: 1.1em;
 }
 
+.intro-text {
+  color:white;
+  font-size: 5em;
+}
+
+#intro-box {
+  padding-top: 15em;
+  padding-bottom: 5em;
+  height: 100%;
+  background-image: url('../img/wallpaper.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 #about-box {
   padding-top: 15em;
   padding-bottom: 5em;
   height: 90%;
-  background-image: url('http://images6.fanpop.com/image/photos/34500000/Blue-Wallpaper-colors-34503103-1440-900.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   color:white;
 }
 
