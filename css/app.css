@@ -54,17 +54,13 @@
 }
 
 #about-box {
-  padding-top: 15em;
+  padding-top: 5em;
   padding-bottom: 5em;
-  height: 90%;
+  height: 95%;
 }
 
 .about-pic {
   padding: 1em;
-}
-
-.about-subtext h2{
-  font-size: .8em;
 }
 
 .about-text p{
