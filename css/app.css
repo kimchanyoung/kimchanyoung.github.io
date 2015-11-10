@@ -4,26 +4,43 @@
 }
 
 .top-bar .name h1 a {
-  color: black;
+  color: #00004b;
   font-family: 'Nobile', sans-serif;
   font-size: 1.5em;
 }
 
-.top-bar-section li.hover:not(.has-form) a:not(.button) {
-  background: black;
+.top-bar-section li.active:not(.has-form) a:not(.button):hover {
+  background: #00004b;
   color: white;
   font-size: 1.1em;
 }
 
 .top-bar-section li.active:not(.has-form) a:not(.button) {
   background: white;
-  color: black;
+  color: #00004b;
   font-size: 1.1em;
+}
+
+.box-title h1 {
+  font-size: 1.5em;
+}
+
+.item-box{
+  border: 2px solid black;
+  height: 100%;
+  padding: 3em;
 }
 
 .intro-text {
   color:white;
   font-size: 5em;
+  font-family: 'Codystar';
+}
+
+.intro-subtext {
+  color:white;
+  font-size: 3em;
+  font-family: 'Codystar';
 }
 
 #intro-box {
@@ -40,12 +57,14 @@
   padding-top: 15em;
   padding-bottom: 5em;
   height: 90%;
-  color:white;
 }
 
-.box-title h1 {
-  font-size: 1.5em;
-  color:white;
+.about-pic {
+  padding: 1em;
+}
+
+.about-subtext h2{
+  font-size: .8em;
 }
 
 .about-text p{
@@ -55,4 +74,8 @@
 .project-img {
   height: 300px;
   width: 300px;
+}
+
+.project {
+  display: inline-block;
 }
