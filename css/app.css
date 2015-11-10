@@ -1,0 +1,46 @@
+.top-bar {
+  background-color: white;
+
+}
+
+.top-bar .name h1 a {
+  color: black;
+  font-family: 'Nobile', sans-serif;
+  font-size: 1.5em;
+}
+
+.top-bar-section li.hover:not(.has-form) a:not(.button) {
+  background: black;
+  color: white;
+  font-size: 1.1em;
+}
+
+.top-bar-section li.active:not(.has-form) a:not(.button) {
+  background: white;
+  color: black;
+  font-size: 1.1em;
+}
+
+#about-box {
+  padding-top: 15em;
+  padding-bottom: 5em;
+  height: 90%;
+  background-image: url('http://images6.fanpop.com/image/photos/34500000/Blue-Wallpaper-colors-34503103-1440-900.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color:white;
+}
+
+.box-title h1 {
+  font-size: 1.5em;
+  color:white;
+}
+
+.about-text p{
+  margin: 0;
+}
+
+.project-img {
+  height: 300px;
+  width: 300px;
+}
