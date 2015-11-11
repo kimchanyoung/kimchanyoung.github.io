@@ -125,7 +125,46 @@
   display: inline-block;
 }
 
+#contact-box {
+  background-color: white;
+}
+
+.contact-title h1{
+  color:black;
+}
+
+.contact-stuff {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.contact-icon {
+  color: grey;
+  font-size: 3em;
+}
+
+#email-icon:hover {
+  color: #C63D2D;
+}
+
+#github-icon:hover {
+  color:black;
+}
+
+#linkedin-icon:hover {
+  color: #4875B4
+}
+
+#twitter-icon:hover {
+  color: #0084b4;
+}
+
 
 .full-width {
   max-width: 1400px;
+}
+
+.footer {
+  height: 10px;
+  background-color: black;
 }
