@@ -6,8 +6,8 @@
     <title>Chanyoung Kim</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/app.css" />
-    <link href='https://fonts.googleapis.com/css?family=Nobile:700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Kalam:400' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='css/hover.css' />
+    <link href='https://fonts.googleapis.com/css?family=Kalam|Nobile:700italic|Open+Sans' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr.js"></script>
     <script src='js/app.js'></script>
   </head>
@@ -25,10 +25,10 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right">
-            <li class="active" id='to-about'><a href="#about-box">About</a></li>
-            <li class="active"><a href="#skills-box">Skills</a></li>
-            <li class="active"><a href="#portfolio-box">Portfolio</a></li>
-            <li class="active"><a href="#contact-box">Contact</a></li>
+            <li class="active hvr-bubble-bottom" id='to-about'><a href="#about-box">About</a></li>
+            <li class="active hvr-bubble-bottom"><a href="#portfolio-box">Portfolio</a></li>
+            <li class="active hvr-bubble-bottom"><a href="#skills-box">Blog</a></li>
+            <li class="active hvr-bubble-bottom"><a href="#contact-box">Contact</a></li>
           </ul>
         </section>
       </nav>
@@ -58,15 +58,19 @@
         </div>
         <div class='medium-5 medium-offset-1 columns'>
           <div class='row'>
-            <div class='medium-12 medium-centered text-center columns box-title'>
+            <div class='medium-12 medium-centered text-center columns box-title about-title'>
               <h1>About Me</h1>
             </div>
           </div>
           <div class='row'>
             <div class='large-12 large-centered columns about-text'>
-              <p>Hi there! My name is Chanyoung Kim and I'm a full-stack web developer based in New York City.</p>
-              <p>I'm an ex-biochem-student-turned-programmer and I am passionate about writing clean and elegant code, and I really love the creative and productive process of designing beautiful solutions to interesting problems.</p>
-              <p></p>
+              <p>Hi there! My name is Chanyoung Kim and I'm a full-stack web developer based in NYC.</p>
+              <p>I am passionate about writing clean and elegant code, and I love the creative and productive process of designing beautiful solutions to interesting problems. I made this website to share a little bit about myself!</p>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='small-12 small-centered text-center columns'>
+              <a class='small round button contact-btn' href='#contact-box'>Contact me!</a>
             </div>
           </div>
         </div>
@@ -77,27 +81,9 @@
       </div>
     </div>
 
-    <div id='skills-box' class='item-box'>
-      <div class='row'>
-        <div class='large-12 large-centered text-center columns box-title'>
-          <h1>Skills</h1>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='large-6 large-centered text-center columns'>
-          <p>I work predominantly in Ruby on Rails, focusing on clean, elegant, manageable code.</p>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='large-8 large-centered text-center columns'>
-          <p>I am also proficient in JavaScript, HTML, and CSS.</p>
-        </div>
-      </div>
-    </div>
-
     <div id='portfolio-box' class='item-box'>
       <div class='row'>
-        <div class='large-12 large-centered text-center columns box-title'>
+        <div class='large-12 large-centered text-center columns box-title portfolio-title'>
           <h1>Portfolio</h1>
         </div>
       </div>
