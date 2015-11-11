@@ -31,7 +31,7 @@
   font-family: 'Patua One';
 }
 
-.item-box{
+.item-box {
   padding-top: 5em;
   padding-bottom: 5em;
   font-family: 'Open Sans'
@@ -59,7 +59,7 @@
   background-size: cover;
 }
 
-#about-box {
+#about {
   padding-top: 5em;
 }
 
@@ -89,15 +89,15 @@
   border: 2px solid #7CCA38;
 }
 
-#skills-box p {
+#skills p {
   font-family: Times;
 }
 
-#skills-box {
+#skills {
 
 }
 
-#skills-box:hover {
+#skills:hover {
   color: ;
 }
 
@@ -129,7 +129,7 @@
   display: inline-block;
 }
 
-#contact-box {
+#contact {
   background-color: white;
 }
 

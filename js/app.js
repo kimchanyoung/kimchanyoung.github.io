@@ -2,31 +2,31 @@ $(document).ready(function(){
 
   $("#to-about").click(function() {
     $('html, body').animate({
-        scrollTop: $("#about-box").offset().top
+        scrollTop: $("#about").offset().top
     }, 1000);
   });
 
   $("#to-skills").click(function() {
     $('html, body').animate({
-        scrollTop: $("#skills-box").offset().top
+        scrollTop: $("#skills").offset().top
     }, 1000);
   });
 
   $("#to-portfolio").click(function() {
     $('html, body').animate({
-        scrollTop: $("#portfolio-box").offset().top
+        scrollTop: $("#portfolio").offset().top
     }, 1000);
   });
 
   $("#to-blog").click(function() {
     $('html, body').animate({
-        scrollTop: $("#blog-box").offset().top
+        scrollTop: $("#blog").offset().top
     }, 1000);
   });
 
   $("#to-contact").click(function() {
     $('html, body').animate({
-        scrollTop: $("#contact-box").offset().top
+        scrollTop: $("#contact").offset().top
     }, 1000);
   });
 })
