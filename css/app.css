@@ -12,21 +12,24 @@
   background: #e1e1e1;
   color: #29387e;
   font-size: 1.1em;
+  font-family: 'Open Sans';
 }
 
 .top-bar-section li.active:not(.has-form) a:not(.button) {
   background: white;
-  color: black;
+  color: #29387e;
   font-size: 1.1em;
+  font-family: 'Open Sans';
 }
 
 .box-title h1 {
   font-size: 1.5em;
-  font-family: Helvetica;
+  font-family: 'Patua One';
 }
 
 .item-box{
-  padding: 3em;
+  padding-top: 5em;
+  padding-bottom: 5em;
   font-family: 'Open Sans'
 }
 
@@ -38,7 +41,7 @@
 
 .intro-subtext {
   color:white;
-  font-size: 2.5em;
+  font-size: 3em;
   font-family: Times;
 }
 
@@ -66,7 +69,7 @@
   border-bottom: 0;
 }
 
-.about-text p{
+.about-text p {
   text-align: justify;
 }
 
@@ -77,23 +80,38 @@
 }
 
 .contact-btn:hover {
-  background-color: #29387e;
+  background-color: #7CCA38;
   color: white;
-  border: 2px dotted #29387e;
+  border: 2px solid #7CCA38;
 }
 
-#portfolio-box {
-  background-color: #383c4d;
+#skills-box p {
+  font-family: Times;
 }
 
 .portfolio-title h1{
-  color: white;
+  color: black;
+}
+
+.project-stuff {
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .project-img {
   height: 300px;
   width: 300px;
+  border: 5px solid black;
 }
+
+/*.proj-desc {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  height: 300px;
+  width: 300px;
+  font-size: 1em;
+  display: inline-block;
+}*/
 
 .project {
   display: inline-block;

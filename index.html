@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel='stylesheet' href='css/hover.css' />
-    <link href='https://fonts.googleapis.com/css?family=Kalam|Nobile:700italic|Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Kalam|Nobile:700italic|Open+Sans|Patua+One' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr.js"></script>
     <script src='js/app.js'></script>
   </head>
@@ -25,10 +25,11 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right">
-            <li class="active hvr-bubble-bottom" id='to-about'><a href="#about-box">About</a></li>
-            <li class="active hvr-bubble-bottom"><a href="#portfolio-box">Portfolio</a></li>
-            <li class="active hvr-bubble-bottom"><a href="#skills-box">Blog</a></li>
-            <li class="active hvr-bubble-bottom"><a href="#contact-box">Contact</a></li>
+            <li class="active hvr-bubble-bottom" id='to-about'><a href="#about-box">about</a></li>
+            <li class="active hvr-bubble-bottom"><a href="#skills-box">skills</a></li>
+            <li class="active hvr-bubble-bottom"><a href="#portfolio-box">portfolio</a></li>
+            <li class="active hvr-bubble-bottom"><a href="#blog-box">blog</a></li>
+            <li class="active hvr-bubble-bottom"><a href="#contact-box">contact</a></li>
           </ul>
         </section>
       </nav>
@@ -81,44 +82,65 @@
       </div>
     </div>
 
+    <div id='row'>
+
+      <div class='small-8 small-centered columns'>
+        <hr />
+      </div>
+    </div>
+
+    <div id='skills-box' class='item-box'>
+      <div class='row'>
+        <div class='medium-12 medium-centered text-center columns box-title skills-title'>
+          <h1>Skills</h1>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='small-8 text-center small-centered columns'>
+          <p>
+            I am a <strong>full-stack</strong> web developer with a constantly growing skill set including <strong>Ruby on Rails</strong> and <strong>Sinatra</strong> for the back-end, and <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong> for the front-end. I have experience developing clean, well-managed and thoroughly <strong>tested</strong> code, as well as sleek, <strong>responsive</strong> and <strong>mobile-first</strong> design.
+          </p>
+          <p>
+            I haved worked on teams using <strong>agile project management</strong>, and have a solid fundamental understanding of <strong>version control systems</strong> like <strong>git</strong>. Also, through my varied educational and professional background, I have developed <strong>strong communication skills</strong>.
+          </p>
+          <p>
+            I am a <strong>tenacious problem solver</strong>, and love to <strong>be challenged</strong> and <strong>to grow</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id='row'>
+      <div class='small-8 small-centered columns'>
+        <hr />
+      </div>
+    </div>
+
     <div id='portfolio-box' class='item-box'>
       <div class='row'>
         <div class='large-12 large-centered text-center columns box-title portfolio-title'>
           <h1>Portfolio</h1>
         </div>
       </div>
-      <div class='row'>
-        <div class='medium-6 text-center columns'>
-          <div class='project'>
-            <div class='row'>
-              <div class='medium-12 medium-centered text-center columns'>
-                <h2>nghbor.ly</h2>
-              </div>
-            </div>
-            <div class='row'>
-              <div class='medium-12 medium-centered text-center columns'>
-                <img class='project-img' src='img/nghborly.png'/>
-              </div>
-            </div>
-          </div>
+      <div class='row project-stuff'>
+        <div class='medium-6 text-center columns project'>
+          <a href='http://nghbor-ly.herokuapp.com'>
+            <img class='project-img' src='img/nghborly.png'/>
+          </a>
         </div>
-        <div class='medium-6 text-center columns'>
-          <div class='project'>
-            <div class='row'>
-              <div class='medium-12 medium-centered text-center columns'>
-                <h2>Stack Overphil</h2>
-              </div>
-            </div>
-            <div class='row'>
-              <div class='medium-12 medium-centered text-center columns'>
-                <img class='project-img' src='img/stackoverphil.png'/>
-              </div>
-            </div>
-          </div>
+        <div class='medium-6 text-center columns project'>
+          <a href='http://stack-overphil.herokuapp.com'>
+            <img class='project-img' src='img/stackoverphil.png'/>
+          </a>
         </div>
       </div>
     </div>
 
+    <div id='row'>
+      <div class='small-8 small-centered columns'>
+        <hr />
+      </div>
+    </div>
 
     <div id='contact-box' class='item-box'>
       <div class='row'>
@@ -126,6 +148,7 @@
           <h1>Contact</h1>
         </div>
       </div>
+
     </div>
     <!-- For Foundation Icons, put this in your head -->
 <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
