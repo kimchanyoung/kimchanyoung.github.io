@@ -1,6 +1,5 @@
 .top-bar {
   background-color: white;
-
 }
 
 .top-bar .name h1 a {
@@ -23,24 +22,24 @@
 
 .box-title h1 {
   font-size: 1.5em;
+  font-family: Helvetica;
 }
 
 .item-box{
-  border: 2px solid black;
-  height: 100%;
   padding: 3em;
+  border: 2px solid black;
 }
 
 .intro-text {
   color:white;
   font-size: 5em;
-  font-family: 'Codystar';
+  font-family: 'Kalam';
 }
 
 .intro-subtext {
   color:white;
   font-size: 3em;
-  font-family: 'Codystar';
+  font-family: Times;
 }
 
 #intro-box {
@@ -55,16 +54,15 @@
 
 #about-box {
   padding-top: 5em;
-  padding-bottom: 5em;
-  height: 95%;
 }
 
 .about-pic {
-  padding: 1em;
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .about-text p{
-  margin: 0;
+  text-align: justify;
 }
 
 .project-img {
@@ -74,4 +72,9 @@
 
 .project {
   display: inline-block;
+}
+
+
+.full-width {
+  max-width: 1400px;
 }
