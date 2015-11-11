@@ -15,6 +15,10 @@
   font-family: 'Open Sans';
 }
 
+.toggle-topbar a span{
+  color: black;
+}
+
 .top-bar-section li.active:not(.has-form) a:not(.button) {
   background: white;
   color: #000000;
