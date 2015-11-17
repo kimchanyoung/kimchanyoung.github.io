@@ -1,0 +1,41 @@
+<div id="main">
+  <div id="content">
+    <h2 id="blogtitle">
+    Enumerable Methods
+  </h2>
+    <p>
+      I'm going to write about some enumerable methods: map, group_by, and cycle.
+    </p>
+    <p>
+      Map is a method callable on enumerables, and iterates through the the collection, invoking the given block once per element. It then returns a new array, populated with the new values. This can be used to perform simple tasks like returning a new array from an array by multiplying all of its values by 3:
+      <code>
+        [1,2,3,4].map { |x| x * 3}
+      </code>
+      But it can be used to perform more complex tasks too, by using conditionals. If we have an array of animals and want to turn all "dog"s into "puppy"s, we can do the following:
+      <code>
+        ["dog", "cat", "dog", "frog"].maps {|animal| animal = "puppy" if animal = dog}
+      </code>
+    <p>
+      <code>map</code> can be called destructively by invoking <code>map!</code>, and is also an alias for <code>collect</code>.
+    </p>
+    <p>
+      As its name suggests, <code>group_by</code> groups elements in a collection by the results of its given block. The results are returned in a hash where the keys are the result from the block and the values are arrays of the elements that correspond to the key.
+    </p>
+    <p>
+      For instance, <code>group_by</code> can be used to separate the names in a list by the first letter of their names.
+    </p>
+    <p>
+      <code>
+        ["Chan", "Chris", "Charles", "John", "James"].group_by{|name| name[0] => {"C"=>["Chan", "Chris", Charles"], "J"=>["John", "James"]}
+      </code>
+    </p>
+    <p>
+      The <code>cycle</code> method cycles through a collection n number of times, executing the code in the block for each iteration. When cycle is called without an argument, it continues indefinitely.
+    </p>
+  </div>
+</div>
+
+
+
+
+

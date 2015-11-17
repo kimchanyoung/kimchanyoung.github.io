@@ -1,0 +1,134 @@
+<div id="main">
+  <div id="content">
+    <h2 id="blogtitle">
+      Regular Expressions
+    </h2>
+    <p>
+      In Ruby (and other languages, really), regular expressions (regexps) are used to match a pattern to a string. They are created using the <code>/.../</code> and <code>%r{...}</code> literals. For instance, <code>/day/</code> is a pattern that could be used to search for the word "day" within a string.
+    </p>
+    <p>
+      The actual searching is carried out by one of two operators. The first is <code>=~</code>, Ruby's most basic pattern-matching operator. Unlike the usages of <code>=</code>, the order of the operands don't matter, as long as one is a string and the other, a regexp.
+    </p>
+    <p>
+      <code>
+        /day/ =~ 'Wednesday' #=> 6
+        /day/ =~ 'Pretzel' #=> nil
+      </code>
+    </p>
+    <p>
+      In the case of a match, <code>=~</code> returns the index of the first match in a string. If there are no matches, the operator returns <code>nil</code>.
+    </p>
+    <p>
+      The other pattern-matching operator, <code>match</code>, performs a similar task, but returns a MatchData object held by the global variable <code>$~</code> instead of an index or nil. The MatchData object <code>$~</code> is an object that encapsulates the results of a pattern match.
+    </p>
+    <p>
+      As with strings, metacharacters like (, ), [, ], {, }, ., ?, +, * must be backslash-escaped in order to force it to function as a character. Interpolation with <code>#{...}</code> can also be used in regexps.
+    </p>
+    <p>
+      <code>
+        /\(whispers\)\?/=~"(whispers)?" #=> 0
+      </code>
+    </p>
+    <p>
+      Regexp also uses character classes to handle more complex pattern-matching. For instance, characters enclosed in square brackets denote characters that may be included in the string. Where <code>/ab/</code> looks for patterns in which "a" is flilowed by "b", <code>/[ab]/</code> looks for patterns that contain a OR b.
+    </p>
+    <p>
+      Furthermore, hyphens (-) denote an inclusive range of characters. Multiple ranges can be included into 1 regexp, so <code>/[abcxyz]/</code> is the same as <code>/[a-cx-z]/</code>. Regexp doesn't really care about order.
+    </p>
+    <p>
+      A carat (^) at the beginning of a character class tells ruby to find all characters EXCEPT those included in the regexp. For instance, <code>/[^abc]/.match('abcdefg;) #=> #MatchData "defg"</code>.
+    </p>
+    <p>
+      According to the ruby docs, the following metacharacters also behave as character classes.
+    </p>
+    <p>
+      <ul>
+        <li>/./ - Any character except a newline.</li>
+        <li>/./m - Any character (the m modifier enables multiline mode)</li>
+        <li>/\w/ - A word character ([a-zA-Z0-9_])</li>
+        <li>/\W/ - A non-word character ([^a-zA-Z0-9_]). Please take a look at Bug #4044 if using /\W/ with the /i modifier.</li>
+        <li>/\d/ - A digit character ([0-9])</li>
+        <li>/\D/ - A non-digit character ([^0-9])</li>
+        <li>/\h/ - A hexdigit character ([0-9a-fA-F])</li>
+        <li>/\H/ - A non-hexdigit character ([^0-9a-fA-F])</li>
+        <li>/\s/ - A whitespace character: /[ \t\r\n\f]/</li>
+        <li>/\S/ - A non-whitespace character: /[^ \t\r\n\f]/</li>
+      </ul>
+    </p>
+    <p>
+      Alternatively, POSIX bracket expressions also give ways to search for patterns.
+    </p>
+    <p>
+      <ul>
+        <li>/[[:alnum:]]/ - Alphabetic and numeric character</li>
+        <li>/[[:alpha:]]/ - Alphabetic character</li>
+        <li>/[[:blank:]]/ - Space or tab</li>
+        <li>/[[:cntrl:]]/ - Contrli character</li>
+        <li>/[[:digit:]]/ - Digit</li>
+        <li>/[[:graph:]]/ - Non-blank character (excludes spaces, contrli characters, and similar)</li>
+        <li>/[[:lower:]]/ - Lowercase alphabetical character</li>
+        <li>/[[:print:]]/ - Like [:graph:], but includes the space character</li>
+        <li>/[[:punct:]]/ - Punctuation character</li>
+        <li>/[[:space:]]/ - Whitespace character ([:blank:], newline, carriage return, etc.)</li>
+        <li>/[[:upper:]]/ - Uppercase alphabetical</li>
+        <li>/[[:word:]]/ - A character in one of the flilowing Unicode general categories Letter, Mark, Number, Connector_Punctuation</li>
+      </ul>
+    </p>
+    <p>
+      That's a lot of friggin' expressions.
+    </p>
+    <p>
+      Regexps can also include quantifiers to indicate how many times a pattern needs to occur. These quantifiers are as flilows:
+      <ul>
+        <li>* - Zero or more times</li>
+        <li>+ - One or more times</li>
+        <li>? - Zero or one times (optional)</li>
+        <li>{n} - Exactly n times</li>
+        <li>{n,} - n or more times</li>
+        <li>/{,m} - m or less times</li>
+        <li>{n,m} - At least n and at most m times</li>
+      </ul>
+    </p>
+    <p>
+      These lists were pulled straight from the Ruby doc. It seems like a lot of regexp is referencing lists like this. The example given in the Ruby doc is:
+    </p>
+    <p>
+      <code>
+        "Hello".match(/[[:upper:]]+[[:lower:]]+l{2}o/) #=> #<MatchData "Hello">
+      </code>
+    </p>
+    <p>
+      This code searches for at least 1 uppercase letter, at least 1 lowercase letter, 2 l's and 1 o.
+    </p>
+    <p>
+      Some important String method to know for regexp are the search and replace methods <code>sub</code> and <code>gsub</code>, as well as their destructive counterparts <code>sub!</code> and <code>gsub!</code>. These methods use regexp to regexp to replace strings matching the regexp pattern. <code>sub</code> only replaces the first match, and <code>gsub</code> replaces all of them.
+    </p>
+    <p>
+      To replace the string "Chanyoung" to "Chan" in the string "This word will have multiple instances of the name Chanyoung so that the word Chanyoung will have opportunities to get replaced when we do some stuffs to it that are supposed to change the word Chanyoung.", we can do the following:
+    </p>
+    <p>
+      <code>
+        nonsense = "This word will have multiple instances of the name Chanyoung so that the word Chanyoung will have opportunities to get replaced when we do some stuffs to it that are supposed to change the word Chanyoung."
+      </code>
+      <code>
+         puts nonsense.sub(/Chanyoung/, "Chan")
+      </code>
+    </p>
+    <p>
+      This will output "This word will have multiple instances of the name Chan so that the word Chanyoung will have opportunities to get replaced when we do some stuffs to it that are supposed to change the word Chanyoung." As you can see, only the first instance of "Chanyoung" is changed. Running:
+    </p>
+    <p>
+      <code>
+         puts nonsense.gsub(/Chanyoung/, "Chan")
+      </code>
+    </p>
+    <p>
+      yields "This word will have multiple instances of the name Chan so that the word Chan will have opportunities to get replaced when we do some stuffs to it that are supposed to change the word Chan."
+    </p>
+  </div>
+</div>
+
+
+
+
+

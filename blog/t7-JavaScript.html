@@ -1,0 +1,82 @@
+<div id="main">
+  <div id="content">
+    <h2 id="blogtitle">
+    Ruby vs. JavaScript
+   </h2>
+    <p>
+      In comparing Ruby and JavaScript, the most apt place to start is probably the use cases. Ruby is a general purpose language often used in building web applications in its framework, Rails (when I told my coworker that I would be attending a coding bootcamp that taught Ruby on Rails, his response was, "Oh, very start-up-y, huh?"). JavaScript, which has no relation to its namesake Java, is a scripting language used to make web pages interactive. Wikipedia cites it as being the "assembly language of the web." Let's discuss some of the syntactical differences.
+    </p>
+    <h3>Ruby Hashes vs. JavaScript Objects</h3>
+    <p>
+      In Ruby, hashes are used to store key-value pairs that can utilize a good number of methods in the Enumerables class (indexed collections). They are used to store values in variables (usually symbols, actually). Hashes in arrays look something like this.
+    </p>
+    <p>
+      <pre><code>
+        hash1 = {"Cats" => 5, "Dogs" => 4, "Humans" => 7}
+        hash2 = {name:"Chan", age: 23, }
+      </code></pre>
+    </p>
+    <p>
+      JavaScript objects are not like Ruby hashes rather than Ruby classes(which are objects). Unlike Ruby, which is a fully object-oriented class-based language, JavaScript is kind of a hybrid language that CAN do object-oriented business. According to some blogger dude Adam Stanton: In Ruby, every class is an object, and every class CONTAINS a hash of references to other objects. A JavaScript object IS a collections of properties that reference other objects. Ya get that? I think the distinction is that Ruby classes contain hashes of references, whereas JavaScript objects are collections. This causes them to function differently because of differences in data encapsulation. So JavaScript objects behave very much like hashes, but with a few more nuances.
+    </p>
+    <p>
+      The simplest way to create a JavaScript object is by the literal technique, which creates a singular, unique instance of an object. This method looks like this:
+    </p>
+    <p>
+      <pre><code>
+        var cup = {
+          color: "white",
+          size: "large",
+          sing: function() {return "Cups do not sing.";}
+        };
+      </code></pre>
+    </p>
+    <p>
+      This code creates one instance of a "cup" object, with the corresponding color and size properties. They can be called by invoking <code>cup.color</code> or <code>cup[size]</code>. The method varies depending on the nature of the property being called, but that's for a different post. Since its creation, the <code>cup</code> object can be invoked multiple times in the code for its properties.
+    </p>
+    <p>
+      Now, you might say, "But Chan, that looks just like a Ruby class!" Sure enough, the <code>cup</code> seems to have the instance variable and methods that might be contained in a Ruby class. But as previously stated, the main difference lies in the data encapsulation. Ruby does a better job "managing its household" in that its methods and things only return the things that they are instructed to return. JavaScript objects, like Ruby hashes, return data when invoked without restricting access. Like... Ruby classes are robots that you interact with to get things from... and JS objects are bags of properties that you can take from.
+    </p>
+    <h3>Ruby Classes vs JavaScript Constructor Functions</h3>
+    <p>
+      Let's get back to Ruby classes. They are objects that contain hashes of references to other objects. They are created as follows:
+    </p>
+    <p>
+      <pre><code>
+        class Furniture
+          def initialize(type)
+            @type = type
+          end
+          attr_reader: type
+
+          def smell
+            puts "It smells like wood!"
+          end
+        end
+      </code></pre>
+    </p>
+    <p>
+      In the preceding code, we've created a class called Furniture, which instantiates with a instance variable called type, and allows outside objects to access certain parts of its information, like its type, and a method called <code>smell</code>. Creating classes in Ruby allows users to create multiple instances of its class simply by calling <code>chair = Furniture.new("chair")</code>.
+    </p>
+    <p>
+      JavaScript constructor functions achieve a similar thing. Although we previously said that JavaScript objects are more like Ruby hashes than like Ruby classes, constructor functions allow users to create multiple instances of a particular object.
+    </p>
+    <p>
+      <pre><code>
+        function Furniture(type) {
+          this.type = type;
+          this.smell = function() {return "It smells like wood!";}
+        };
+      </code></pre>
+    </p>
+    <p>
+      This code achieves the same thing as the Ruby code. You can create new instances of <code>Furniture</code> by calling <code>var table = new Furniture("table");</code>.
+    </p>
+    <p>
+      So what are the difference? One of the main differences is that Ruby objects are all created from the Object class by default. EVERYTHING is an object. So when you create a class object, or ANYTHING, really, you're just making a bunch of objects. But JS inherits things via the "prototype chain." Every JS object has a prototype (Mew is a prototype of MewTwo), and if you try to call for a property from an object that does not have that property, it will look above the prototype chain for that property. If the property isn't found there either, it looks up one prototype above. This continues until the chain reachs the <code>Object</code> prototype, whose prototype parent is <code>null</code>.
+    </p>
+  </div>
+</div>
+
+
+

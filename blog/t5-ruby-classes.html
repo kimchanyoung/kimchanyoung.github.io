@@ -1,0 +1,46 @@
+<div id="main">
+  <div id="content">
+    <h2 id="blogtitle">
+      RUBY CLASSES
+    </h2>
+    <p>
+      A class is a thing. Just any 'thing.' Like a banana. Or a book. Or a person. These 'things' have features and attributes. Like color, or weight. And they do different things, like lay motionless, open, or walk.
+    </p>
+    <p>
+      Sorry, that's a bad explanation. Classes in Ruby are objects that can be given instance variables (think attributes) and instance methods (action verbs). New instances of classes can be made with a variable set of instance variables and instance methods to represent different things.
+    <p>
+      For example, let's say that we want to make a "banana" class. The code may look as follows.
+      <pre><code>
+        Class Banana
+          def initialize(color, length)
+            @color = color
+            @length = length
+          end
+
+          def peel
+            @color = yellow
+          end
+
+          def eat
+            (@length = @length - 1) unless (@length == 0)
+          end
+        end
+      </code></pre>
+    </p>
+    <p>
+      In the preceding code, we have the definition of a "Banana" class. It takes in 2 variables for color and length, and receives that information as its attributes. It also has 2 instance methods that can be performed on an object of this class. You can peel the banana, which turns it yellow (bananas are yellow on the inside), and you can eat the banana, which decreases its length. You might want to create a thing to check whether the banana is peeled before you eat it (perhaps an instance variable that contains a boolean value <code>peeled?</code>) but let's just assume that we're barbarians who enjoy the bitter taste of peel and rubbery film on our teeth.
+    </p>
+    <p>
+      One could create a new banana named Frank by the following:
+      <code>
+        frank = Banana.new("green", 7)
+      </code>
+      This creates a new Banana named <code>frank</code> whose <code>color</code> is green and <code>length</code> is 7 (units, you barbarian). You can make it do things by calling <code>frank.peel</code> or <code>frank.eat</code>.
+    </p>
+  </div>
+</div>
+
+
+
+
+

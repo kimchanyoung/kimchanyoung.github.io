@@ -1,0 +1,100 @@
+<div id="main">
+  <div id="content">
+    <h2 id="blogtitle">
+    Blocks, Procs, & Lambdas
+  </h2>
+    <p>
+      Finding a simple, comprehensible of closures is really frustrating. According to Wikipedia, a "closure" in a programming language is a "technique for implementing lexically scoped name binding in languages with first class functions." I felt the need to reference that definition just in case my simplified definition wasn't quite accurate -- at least I would have provided some kind of right information. It's pretty funny because tons of bloggers attempting to explain the concepts of blocks, procs and lambdas complain about the Wikipedia definition.
+    </p>
+    <p>
+      Heh, anyway. A closure is a technique of an object-like function (in that can be stored as a variable...sometimes) that can know/remember/access the variables local to the scope in which the closure was created. A closure can retain its access to these variables even after the part of code which contained that variable has ended. In other words, a closure is a function's ability to remember its "context."
+    <p>
+      Perhaps a good place to being is with blocks, the simplest and (for beginners like me) most familiar closures in Ruby. Blocks are chunks of code in braces or surrounded by do...end statements. They look something like this:
+    </p>
+    <p>
+      <pre><code>
+        #Example 1
+        [1, 2, 3, 4, 5].collect!{|ele| ele * 3}
+        #Example 2
+        [1, 2, 3, 4, 5].collect do |ele|
+          ele * 3
+        end
+      </code></pre>
+    </p>
+    <p>
+      Just to start -- blocks are not objects and cannot be stored into variables. I feel like blocks are documented well enough that I don't need to go TOO deep into detail, but essentially, blocks are used to execute certain bits of code. They can't be stored. They just DO THINGS. Procs and Lambdas are more complicated, we'll just leave it at that and dive right into the stuff I don't quite understand.
+    </p>
+    <p>
+      Let's say there's a block of code that you need to run multiple times. Sure, you can type <code>[1,2,3,4,5].collect!{|ele| ele * 3}</code> a bunch of times. But Ruby is an Object-Oriented language, and Procs are the means by which Ruby allows for Blocks to be saved as reusable. A block is essentially a Proc that cannot be saved.
+    </p>
+    <p>
+      Procs can be thought of as block-objects. They are blocks of code that can be treated as objects. It is a reusable block of code. It is used as follows:
+    </p>
+    <p>
+      <pre><code>
+        class Array
+          def iterate!(stuff)
+            self.each_with_index do |e, i|
+              self[i] = stuff.call(e)
+            end
+          end
+        end
+
+        mult_by_two = Proc.new do |n|
+          n * 2
+        end
+
+        #This is the same as
+        #mult_by_two = Proc.new {
+        # n * 2
+        # }
+
+        puts [1, 2, 3, 4].iterate!(mult_by_two).inspect
+        # => [2, 4, 6, 8]
+      </code></pre>
+    </p>
+    <p>
+      In the preceding code, mult_by_two is a Proc that multiplies its inputs by 2. As you can see, a proc can be passed off as an argument into a method, which can be <code>call</code>ed to run its code on an element. The <code>iterate!</code> method in the <code>Array</code> class has a block of code that can receive and execute a Proc. If you have a block of code that needs to be run in multiple situations, Proc is your best bet. This is important: Procs don't care how many arguments are passed to it (it'll return nil for extra arguments), and <code>return</code>ing in a Proc will be considered a <code>return</code> in the whole method.
+    </p>
+    <p>
+      Confusingly... Lambdas are Procs too. Just... special Procs. The main distinction is that lambdas require the correct number of arguments passed to it, and <code>return</code>ing in lambda only breaks you out of the lambda, and continues the code. Let's see this in action.
+    </p>
+    <p>
+      <pre><code>
+        class Array
+          def iterate!(stuff)
+            self.each_with_index do |e, i|
+              self[i] = stuff.call(e)
+            end
+          end
+        end
+
+        mult_by_two = lambda { |n| n * 2 }
+
+        puts [1, 2, 3, 4].iterate!(mult_by_two).inspect
+        # => [2, 4, 6, 8]
+      </pre></code>
+    </p>
+    <p>
+      I used the same example just to show that when their distinctions aren't taken advantage of, they are functionally the same. Just to clear up any confustion -- Procs are Procs and lambdas are Procs. They are both Proc objects. But when you create a Proc by invoking Proc.new, it has different characteristics than when you invoke lambda.
+    </p>
+    <p>
+      As stated before, the main difference is that
+      <ol>
+        <li>
+          Lambdas require a correct number of arguments and Procs (Procs created via Proc.new -- you get the idea) do not.
+        </li>
+        <li>
+          When you <code>return</code> something in a lambda, the surrounding code retrieves it and continues alone. When you <code>return</code> something in a Proc, it's as though you called return on the surrounding method too.
+        </li>
+      </ol>
+    </p>
+    <p>
+      I know that I didn't do a perfect job explaining this stuff. I kind of get why the distinctions are important, but I can't YET think of how I might apply this at the level that I'm at now. But still, this is probably good to know.
+    </p>
+  </div>
+</div>
+
+
+
+

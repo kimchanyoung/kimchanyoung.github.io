@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Chanyoung Kim's Site
+  </title>
+  <meta charset="UTF-8">
+  <link type="text/css" rel="stylesheet" href="../stylesheets/blogtemplate.css">
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+</head>
+  <body>
+    <div id="header">
+      <img id="face" src="../imgs/flatface.png">
+       <h1 id="about">
+          <a href="../about.html">ABOUT</a>
+        </h1>
+        <h1 id="blogs">
+          <a href="index.html">BLOG</a>
+        </h1>
+        <h1 id="projects">
+          <a href="https://github.com/kimchanyoung">WORK</a>
+        </h1>
+        <h1 id ="contacts">
+          <a href="../contact.html">CONTACT</a>
+    </div>
+    <div id="main">
+      <div id="content">
+        <h2 id="blogtitle">
+        DBC Cheat-Sheet
+       </h2>
+        <p>
+          In this cheat-sheet, we will cover several random topics like JavaScript Prototypes, object creation, and looping, as well as some basic CSS positioning.
+        </p>
+        <h2 class="topic">
+          JavaScript Objects
+        </h2>
+        <p>
+          Objects in JavaScript is probably a good place to start.
+        </p>
+        <p>
+          In JavaScript, an object is a fundamental data type that holds an unordered list of properties as a series of name-value pairs. An object's properties are either primitive data types (number, string, boolean, undefined, or null) or methods. A unique object is usually created in one of 2 different ways -- by using the object literal notation, or by using the object constructor notation.
+        </p>
+        <p>
+          The object literal notation looks like this:
+          <pre><code>
+            var pikachu = {
+              name: Pikachu;
+              id: 25,
+              type: 'electric',
+              function thundershock() {
+                console.log("Pikachu has used Thundershock!");
+              }
+            };
+          </code></pre>
+          It uses the <code>var</code> call to create one instance of a pikachu, which has the listed attributes. Alternatively, the object constructor method can be used as follows:
+          <pre><code>
+            var pikachu = new Object() {
+              name: Pikachu;
+              id: 25,
+              type: 'electric',
+              function thundershock() {
+                console.log("Pikachu has used Thundershock!");
+              }
+             }
+          </code></pre>
+          As you can see, in the first line, <code>var pikachu</code> is instantiated as an instance of an Object. For reasons that we won't go into now, the object literal method is usually preferred.
+        </p>
+        <p>
+          When creating an object that will have different 'instances' of itself, the constructor pattern can be used. This makes one generic object that can be edited to make many different types of this object.
+
+          <pre><code>
+            function Pokemon(theName, id_num, element_type) {
+              this.name = theName;
+              this.id = id_num;
+              this.type = element_type;
+              this.move = function() {
+                console.log( this.name + " has used " + this.move + "!");
+              };
+            }
+
+            var pikachu = new Pokemon('Pikachu', 25, 'electric');
+          </code></pre>
+
+          This code creates a Pokemon object that can be used to create new instances of Pokemon, like a Pikachu.
+        </p>
+      <h2 class = "topic">
+        Prototyping
+      </h2>
+      <p>
+        In JavaScript, objects "inherit" certain properties and methods from one another. You can think of this as -- all JS objects have a dad, until its "Adam" -- "Object," which has a "null" parent. We saw in the previous section 3 different ways to create objects in JS. The first two, for unique objects, and the third, for a generic one to serve as a type. The first two methods create objects whose parent is the Object.prototype. They are direct descendants of the Object object. But an object created by the constructor pattern (like the third pikachu) is a direct descendant of the object from which it was constructed (Pokemon). Prototypes are like chains of inheritance in which each successor inherits the properties and methods of their predecessors.
+      </p>
+      <p>
+        Not only does this give all objects properties and methods from the ultimate prototype "Object," like hasOwnProperty(), isPrototypeOf(), and toString(), it allows for much control in creation of objects. For instance, if we wanted to make a Charizard object following the example in the constructor pattern example, we could write:
+        <pre><code>
+          Charizard.prototype = new pokemon();
+        </code></pre>
+      </p>
+      <p>
+        This feature in JavaScript necessitates a special piece of logic when cycling through an object's attributes. JavaScript allows for looping through an object's properties by calling: <code>for (var key in obj)</code>. This code instantiates a variable "key" that will cycle through the attributes of an object "obj." But because of prototyping, you want to check to make sure that the key isn't the property of one of the object's prototypes! Therefore, After the for loop, before anything is actually done, all code has to be wrapped by the code <code>if(obj.hasOwnProperty(key))</code>. This bit of logic lets the code run only if the property is native to that object and not to one of its prototypes.
+      </p>
+      <p>
+        Much help was received from JavaScriptIsSexy.com, and the specific resources can be found <a href="http://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/"> here</a>.
+      </p>
+      <h2 class = "topic">
+        CSS Stuff
+      </h2>
+      <p>
+        Okay, maybe this is cheating but no sense in reinventing the wheel.
+      </p>
+      <p>
+        <img src="../imgs/codagogy-css-cs.png">
+      </p>
+      </div>
+      <div id="items">
+      </div>
+      <div id="footer">
+      STUFF WILL GO HERE EVENTUALLY
+      </div>
+    </div>
+
+  </body>
+</html>
+
+
+
+
+
