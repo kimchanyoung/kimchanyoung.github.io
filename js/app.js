@@ -30,9 +30,15 @@ $(document).ready(function(){
     }, 1000);
   });
 
-    $("#contact-btn").click(function() {
+  $("#contact-btn").click(function() {
     $('html, body').animate({
         scrollTop: $("#contact").offset().top
+    }, 1000);
+  });
+
+  $("#opening-btn").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#about").offset().top
     }, 1000);
   });
 })
